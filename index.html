@@ -1,0 +1,2838 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tableau de suivi des accords de traitement des données (DPA) des fournisseurs de Banana TV : démarches, liens officiels, statuts et notes.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f3f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#11100f" media="(prefers-color-scheme: dark)">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Banana TV — Suivi des DPA fournisseurs">
+  <meta property="og:description" content="Démarches, liens officiels, statuts et notes pour chaque accord de traitement des données.">
+  <meta property="og:locale" content="fr_BE">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%231a1a17%22%2F%3E%3Cpath%20d%3D%22M9%2016.8l4.6%204.6L23%2012%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+  <title>Suivi des DPA fournisseurs — Banana TV</title>
+  <style>
+    /* ---------------------------------------------------------------
+       Banana TV — DPA Contracts
+       Tokens first. Every colour, radius, space and duration below is
+       referenced, never re-typed. Light + dark, print, reduced motion.
+    ---------------------------------------------------------------- */
+
+    :root {
+      color-scheme: light;
+
+      /* Surfaces (from recessed to raised) */
+      --bg: oklch(96.5% 0.003 95);
+      --bg-sunken: oklch(94.2% 0.004 95);
+      --surface: oklch(100% 0 0);
+      --surface-muted: oklch(98% 0.002 95);
+      --surface-inset: oklch(96.8% 0.003 95);
+
+      /* Lines */
+      --line: oklch(90% 0.005 95);
+      --line-strong: oklch(82% 0.006 95);
+
+      /* Ink */
+      --ink: oklch(19% 0.004 95);
+      --ink-muted: oklch(50% 0.006 95);
+
+      /* Action */
+      --accent: oklch(24% 0.008 95);
+      --accent-ink: oklch(100% 0 0);
+      --accent-hover: oklch(32% 0.008 95);
+
+      /* Status vocabulary — one meaning per colour, everywhere */
+      --st-not-started: oklch(50% 0.008 95);
+      --st-in-progress: oklch(50% 0.13 250);
+      --st-waiting: oklch(52% 0.115 70);
+      --st-completed: oklch(45% 0.11 152);
+      --st-not-applicable: oklch(52% 0.006 95);
+
+      --focus: oklch(52% 0.19 255);
+      --danger: oklch(48% 0.17 27);
+
+      /* Space scale */
+      --s1: 4px;
+      --s2: 8px;
+      --s3: 12px;
+      --s4: 16px;
+      --s5: 24px;
+      --s6: 32px;
+      --s7: 48px;
+      --s8: 72px;
+
+      /* Type scale — fixed, ratio ~1.2 */
+      --t-xs: 0.75rem;
+      --t-sm: 0.8125rem;
+      --t-base: 0.875rem;
+      --t-md: 1rem;
+      --t-lg: 1.125rem;
+      --t-xl: 1.375rem;
+      --t-2xl: 1.75rem;
+
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+
+      --shadow-sm: 0 1px 2px oklch(20% 0.01 95 / 0.04), 0 6px 18px oklch(20% 0.01 95 / 0.04);
+      --shadow-md: 0 2px 4px oklch(20% 0.01 95 / 0.05), 0 14px 40px oklch(20% 0.01 95 / 0.07);
+
+      /* Motion */
+      --dur-1: 120ms;
+      --dur-2: 180ms;
+      --dur-3: 260ms;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+      /* Semantic stacking order */
+      --z-base: 0;
+      --z-sticky: 100;
+      --z-toast: 400;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+
+        --bg: oklch(17.5% 0.004 95);
+        --bg-sunken: oklch(13.5% 0.004 95);
+        --surface: oklch(21.5% 0.005 95);
+        --surface-muted: oklch(25% 0.005 95);
+        --surface-inset: oklch(24% 0.005 95);
+
+        --line: oklch(30% 0.006 95);
+        --line-strong: oklch(40% 0.007 95);
+
+        --ink: oklch(95% 0.003 95);
+        --ink-muted: oklch(74% 0.006 95);
+
+        --accent: oklch(93% 0.004 95);
+        --accent-ink: oklch(17% 0.004 95);
+        --accent-hover: oklch(85% 0.004 95);
+
+        --st-not-started: oklch(68% 0.008 95);
+        --st-in-progress: oklch(72% 0.13 250);
+        --st-waiting: oklch(78% 0.12 75);
+        --st-completed: oklch(72% 0.13 152);
+        --st-not-applicable: oklch(64% 0.006 95);
+
+        --focus: oklch(70% 0.16 255);
+        --danger: oklch(70% 0.16 27);
+
+        --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.4), 0 6px 18px oklch(0% 0 0 / 0.28);
+        --shadow-md: 0 2px 4px oklch(0% 0 0 / 0.45), 0 14px 40px oklch(0% 0 0 / 0.35);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+      font-size: var(--t-md);
+      color: var(--ink);
+      background: var(--bg);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button, input, select, textarea { font: inherit; color: inherit; }
+
+    a { color: inherit; }
+
+    :where(a, button, summary, input, select, textarea, label.check-wrap):focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 2px;
+      border-radius: var(--radius-sm);
+    }
+
+    .skip-link {
+      position: absolute;
+      left: var(--s4);
+      top: calc(var(--s4) * -4);
+      z-index: var(--z-toast);
+      background: var(--accent);
+      color: var(--accent-ink);
+      padding: var(--s3) var(--s4);
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: var(--t-base);
+      transition: top var(--dur-2) var(--ease-out);
+    }
+
+    .skip-link:focus-visible { top: var(--s4); }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .shell {
+      width: min(1440px, calc(100% - var(--s6)));
+      margin: 0 auto;
+      padding: var(--s5) 0 var(--s8);
+    }
+
+    /* --- Hero ------------------------------------------------------ */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.8fr);
+      gap: var(--s4);
+      margin-bottom: var(--s4);
+    }
+
+    .hero-main, .hero-side, .email-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-main {
+      border-radius: var(--radius-xl);
+      padding: clamp(var(--s5), 4vw, var(--s7));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--s5);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.25rem, 4.4vw, 3.75rem);
+      line-height: 1.02;
+      letter-spacing: -0.032em;
+      text-wrap: balance;
+    }
+
+    .hero-copy {
+      color: var(--ink-muted);
+      line-height: 1.6;
+      max-width: 62ch;
+      margin: 0;
+      font-size: var(--t-base);
+      text-wrap: pretty;
+    }
+
+    .hero-side {
+      border-radius: var(--radius-xl);
+      padding: var(--s5);
+      display: flex;
+      flex-direction: column;
+      gap: var(--s5);
+      justify-content: space-between;
+    }
+
+    .progress-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: var(--s3);
+    }
+
+    .progress-label {
+      color: var(--ink-muted);
+      font-size: var(--t-sm);
+    }
+
+    .progress-number {
+      font-size: var(--t-2xl);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .progress-number .of {
+      color: var(--ink-muted);
+      font-size: var(--t-lg);
+    }
+
+    /* Stacked bar: the whole portfolio at a glance, not just "done" */
+    .progress-bar {
+      display: flex;
+      height: 10px;
+      margin-top: var(--s3);
+      border-radius: 999px;
+      background: var(--surface-inset);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    /* Widths are set from JS. No transition: the segments would animate a
+       layout property, and the bar already changes in response to the
+       user's own click — the card's status colour carries the feedback. */
+    .progress-seg { width: 0; }
+
+    .progress-seg[data-status="completed"] { background: var(--st-completed); }
+    .progress-seg[data-status="in-progress"] { background: var(--st-in-progress); }
+    .progress-seg[data-status="waiting"] { background: var(--st-waiting); }
+    .progress-seg[data-status="not-applicable"] { background: var(--st-not-applicable); }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s2) var(--s4);
+      margin-top: var(--s3);
+      padding: 0;
+      list-style: none;
+      font-size: var(--t-xs);
+      color: var(--ink-muted);
+    }
+
+    .legend li {
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+      font-variant-numeric: tabular-nums;
+      transition: opacity var(--dur-2) var(--ease-out);
+    }
+
+    .legend li[data-empty="true"] { opacity: 0.45; }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--st-not-started);
+      flex: none;
+    }
+
+    .dot[data-status="in-progress"] { background: var(--st-in-progress); }
+    .dot[data-status="waiting"] { background: var(--st-waiting); }
+    .dot[data-status="completed"] { background: var(--st-completed); }
+    .dot[data-status="not-applicable"] { background: var(--st-not-applicable); }
+
+    .hero-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--s2);
+    }
+
+    /* --- Buttons --------------------------------------------------- */
+
+    .button {
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
+      color: var(--ink);
+      min-height: 44px;
+      padding: var(--s3) var(--s4);
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: var(--t-base);
+      transition: background var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out), color var(--dur-2) var(--ease-out);
+      text-decoration: none;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--s2);
+      text-align: center;
+    }
+
+    .button:hover { background: var(--surface-inset); border-color: var(--ink-muted); }
+    .button:active { background: var(--bg-sunken); }
+
+    .button.dark {
+      background: var(--accent);
+      color: var(--accent-ink);
+      border-color: var(--accent);
+    }
+
+    .button.dark:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+
+    .button.quiet {
+      border-color: transparent;
+      background: transparent;
+      color: var(--ink-muted);
+      padding: var(--s2) var(--s3);
+    }
+
+    .button.quiet:hover { background: var(--surface-inset); color: var(--ink); }
+
+    .button.danger:hover { color: var(--danger); border-color: var(--danger); background: transparent; }
+
+    /* --- Toolbar --------------------------------------------------- */
+
+    .toolbar {
+      position: sticky;
+      top: var(--s3);
+      z-index: var(--z-sticky);
+      border-radius: 999px;
+      padding: var(--s2);
+      display: flex;
+      gap: var(--s2);
+      align-items: center;
+      margin-bottom: var(--s4);
+      background: color-mix(in oklab, var(--surface) 82%, transparent);
+      backdrop-filter: blur(14px) saturate(1.4);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+
+    @supports not (backdrop-filter: blur(1px)) {
+      .toolbar { background: var(--surface); }
+    }
+
+    .search {
+      flex: 1;
+      min-width: 140px;
+      min-height: 44px;
+      border: none;
+      background: transparent;
+      padding: var(--s3) var(--s4);
+      outline: none;
+      font-size: var(--t-base);
+      border-radius: 999px;
+    }
+
+    .search::placeholder { color: var(--ink-muted); }
+
+    .filter-select {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: 999px;
+      min-height: 44px;
+      padding: var(--s3) var(--s4);
+      font-size: var(--t-base);
+      cursor: pointer;
+      transition: border-color var(--dur-2) var(--ease-out);
+    }
+
+    .filter-select:hover { border-color: var(--line-strong); }
+
+    .result-count {
+      color: var(--ink-muted);
+      font-size: var(--t-sm);
+      padding-right: var(--s3);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    /* --- Section headings ------------------------------------------ */
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: var(--s4);
+      margin: var(--s7) 0 var(--s4);
+      flex-wrap: wrap;
+    }
+
+    .section-head:first-of-type { margin-top: var(--s5); }
+
+    .section-title {
+      margin: 0;
+      font-size: var(--t-2xl);
+      letter-spacing: -0.028em;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--ink-muted);
+      font-size: var(--t-base);
+      max-width: 60ch;
+    }
+
+    /* --- Vendor grid ----------------------------------------------- */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: var(--s4);
+      align-items: start;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: var(--s5);
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out);
+      scroll-margin-top: 96px;
+    }
+
+    /* .card sets display:flex, which outranks the UA rule for [hidden] */
+    .card[hidden] { display: none; }
+
+    .card:hover { box-shadow: var(--shadow-md); }
+
+    .card:target { border-color: var(--focus); box-shadow: 0 0 0 3px color-mix(in oklab, var(--focus) 28%, transparent); }
+
+    .card.is-done .vendor-name { color: var(--ink-muted); }
+
+    .card-topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--s4);
+    }
+
+    .vendor-name {
+      margin: 0;
+      font-size: var(--t-xl);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+    }
+
+    .status-flag {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s2);
+      margin-top: var(--s2);
+      font-size: var(--t-sm);
+      color: var(--ink-muted);
+    }
+
+    .card[data-status="in-progress"] .status-flag { color: var(--st-in-progress); }
+    .card[data-status="waiting"] .status-flag { color: var(--st-waiting); }
+    .card[data-status="completed"] .status-flag { color: var(--st-completed); }
+    .card[data-status="not-applicable"] .status-flag { color: var(--st-not-applicable); }
+
+    .summary {
+      color: var(--ink-muted);
+      line-height: 1.55;
+      font-size: var(--t-base);
+      margin: var(--s4) 0 0;
+      text-wrap: pretty;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s2);
+      margin: var(--s4) 0 var(--s5);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px var(--s3);
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface-inset);
+      color: var(--ink-muted);
+      font-size: var(--t-xs);
+      white-space: nowrap;
+    }
+
+    /* Only true urgency gets the loud treatment */
+    .pill-priority {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--accent-ink);
+    }
+
+    .pill-cat {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--line-strong);
+    }
+
+    /* --- Disclosures ----------------------------------------------- */
+
+    details {
+      border-top: 1px solid var(--line);
+    }
+
+    .card details:last-of-type { border-bottom: 1px solid var(--line); }
+
+    summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--s3);
+      padding: var(--s3) 0;
+      min-height: 44px;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 600;
+      font-size: var(--t-base);
+    }
+
+    summary::-webkit-details-marker { display: none; }
+    summary::marker { content: ""; }
+
+    summary:hover { color: var(--ink-muted); }
+
+    .chev {
+      flex: none;
+      color: var(--ink-muted);
+      transition: transform var(--dur-2) var(--ease-out);
+    }
+
+    details[open] > summary .chev { transform: rotate(180deg); }
+
+    .steps {
+      margin: 0 0 var(--s4);
+      padding-left: var(--s5);
+      color: var(--ink-muted);
+      line-height: 1.6;
+      font-size: var(--t-base);
+      text-wrap: pretty;
+    }
+
+    .steps li + li { margin-top: var(--s2); }
+
+    .links-grid {
+      display: grid;
+      gap: var(--s2);
+      padding-bottom: var(--s4);
+    }
+
+    .resource-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--s3);
+      text-decoration: none;
+      padding: var(--s3) var(--s4);
+      min-height: 44px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface-muted);
+      font-size: var(--t-base);
+      transition: background var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out);
+    }
+
+    .resource-link:hover {
+      background: var(--surface-inset);
+      border-color: var(--line-strong);
+    }
+
+    .resource-link .ext {
+      color: var(--ink-muted);
+      flex: none;
+    }
+
+    .contact-note {
+      margin: 0 0 var(--s4);
+      color: var(--ink-muted);
+      line-height: 1.6;
+      font-size: var(--t-base);
+      text-wrap: pretty;
+    }
+
+    /* --- Card footer: status + notes -------------------------------- */
+
+    .card-foot {
+      margin-top: auto;
+      padding-top: var(--s4);
+      display: grid;
+      gap: var(--s3);
+    }
+
+    .field {
+      display: grid;
+      gap: var(--s2);
+    }
+
+    .field > span {
+      color: var(--ink-muted);
+      font-size: var(--t-sm);
+    }
+
+    .status-select, .notes {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface-muted);
+      color: var(--ink);
+      outline: none;
+      font-size: var(--t-base);
+      transition: border-color var(--dur-2) var(--ease-out);
+    }
+
+    .status-select:hover, .notes:hover { border-color: var(--line-strong); }
+
+    .status-select {
+      min-height: 44px;
+      padding: var(--s3);
+      cursor: pointer;
+    }
+
+    .notes {
+      min-height: 84px;
+      resize: vertical;
+      padding: var(--s3);
+      line-height: 1.5;
+      font-family: inherit;
+    }
+
+    .notes::placeholder { color: var(--ink-muted); }
+
+    .saved-hint {
+      font-size: var(--t-xs);
+      color: var(--st-completed);
+      opacity: 0;
+      transition: opacity var(--dur-2) var(--ease-out);
+    }
+
+    .saved-hint.show { opacity: 1; }
+
+    /* --- Done checkbox ---------------------------------------------- */
+
+    .check-wrap {
+      position: relative;
+      cursor: pointer;
+      flex: none;
+      border-radius: 50%;
+    }
+
+    .done-check {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .check-ui {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line-strong);
+      color: var(--line-strong);
+      background: var(--surface-muted);
+      transition: background var(--dur-2) var(--ease-out), color var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out);
+      user-select: none;
+      font-size: var(--t-md);
+    }
+
+    .check-wrap:hover .check-ui { border-color: var(--ink-muted); color: var(--ink-muted); }
+
+    .done-check:checked + .check-ui {
+      color: var(--accent-ink);
+      background: var(--st-completed);
+      border-color: var(--st-completed);
+    }
+
+    .done-check:focus-visible + .check-ui {
+      outline: 2px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    /* --- Empty state ------------------------------------------------ */
+
+    .empty {
+      display: none;
+      grid-column: 1 / -1;
+      padding: var(--s8) var(--s5);
+      text-align: center;
+      border: 1px dashed var(--line-strong);
+      border-radius: var(--radius-xl);
+      background: var(--surface-muted);
+    }
+
+    .empty.show { display: block; }
+
+    .empty p {
+      margin: 0 0 var(--s4);
+      color: var(--ink-muted);
+      font-size: var(--t-base);
+    }
+
+    /* --- E-mail templates ------------------------------------------- */
+
+    .email-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: var(--s4);
+    }
+
+    .email-card {
+      border-radius: var(--radius-xl);
+      padding: var(--s5);
+    }
+
+    .email-card h3 {
+      margin: 0 0 var(--s2);
+      font-size: var(--t-xl);
+      letter-spacing: -0.02em;
+    }
+
+    .email-card > p {
+      color: var(--ink-muted);
+      line-height: 1.55;
+      font-size: var(--t-base);
+      margin: 0 0 var(--s4);
+      text-wrap: pretty;
+    }
+
+    .email-toolbar {
+      display: flex;
+      gap: var(--s2);
+      margin-bottom: var(--s3);
+      flex-wrap: wrap;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: var(--surface-inset);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: var(--s4);
+      max-height: 470px;
+      overflow: auto;
+      color: var(--ink);
+      line-height: 1.6;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: var(--t-sm);
+      margin: 0;
+      tab-size: 2;
+    }
+
+    /* --- Footer ------------------------------------------------------ */
+
+    .footer {
+      margin-top: var(--s7);
+      padding-top: var(--s5);
+      border-top: 1px solid var(--line);
+      color: var(--ink-muted);
+      font-size: var(--t-base);
+      line-height: 1.6;
+      display: grid;
+      gap: var(--s3);
+      max-width: 75ch;
+    }
+
+    .footer p { margin: 0; text-wrap: pretty; }
+
+    .footer strong { color: var(--ink); font-weight: 600; }
+
+    .footer-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s2);
+      margin-top: var(--s1);
+    }
+
+    /* --- Toast -------------------------------------------------------- */
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: var(--s5);
+      transform: translateX(-50%) translateY(10px);
+      background: var(--accent);
+      color: var(--accent-ink);
+      padding: var(--s3) var(--s5);
+      border-radius: 999px;
+      box-shadow: var(--shadow-md);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out);
+      z-index: var(--z-toast);
+      font-size: var(--t-base);
+      max-width: calc(100% - var(--s6));
+      text-align: center;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* --- Responsive ---------------------------------------------------- */
+
+    @media (max-width: 1050px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .shell { width: calc(100% - var(--s4)); padding-top: var(--s3); }
+      .hero-main, .hero-side, .card, .email-card { border-radius: var(--radius-lg); }
+      .toolbar { border-radius: var(--radius-lg); flex-wrap: wrap; }
+      .search { flex-basis: 100%; }
+      .filter-select { flex: 1 1 40%; }
+      .result-count { flex-basis: 100%; padding: 0 var(--s3) var(--s1); }
+      .grid { grid-template-columns: 1fr; }
+      .email-grid { grid-template-columns: 1fr; }
+      .hero-actions { grid-template-columns: 1fr; }
+    }
+
+    /* --- Reduced motion ------------------------------------------------ */
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .toast { transform: translateX(-50%); }
+    }
+
+    /* --- Print: the archive copy ---------------------------------------- */
+
+    .print-only { display: none; }
+
+    @media print {
+      :root {
+        color-scheme: light;
+        --bg: #ffffff;
+        --surface: #ffffff;
+        --surface-muted: #ffffff;
+        --surface-inset: #ffffff;
+        --bg-sunken: #ffffff;
+        --line: #cccccc;
+        --line-strong: #999999;
+        --ink: #000000;
+        --ink-muted: #444444;
+        --accent: #000000;
+        --accent-ink: #ffffff;
+        --shadow-sm: none;
+        --shadow-md: none;
+      }
+
+      @page { margin: 14mm; }
+
+      .toolbar, .hero-actions, .check-wrap, .toast, .skip-link, .empty,
+      .email-toolbar, .card-foot, .section-note, .footer-actions { display: none !important; }
+
+      body { background: #fff; }
+      .shell { width: 100%; padding: 0; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-main { padding: 0 0 var(--s4); border: none; box-shadow: none; }
+      .hero-side { border: none; box-shadow: none; padding: 0 0 var(--s4); }
+      h1 { font-size: 28pt; }
+      .section-title { font-size: 16pt; }
+      .grid, .email-grid { display: block; }
+      .card, .email-card {
+        box-shadow: none;
+        break-inside: avoid;
+        margin-bottom: var(--s4);
+        padding: var(--s4) 0;
+        border: none;
+        border-bottom: 1px solid var(--line);
+        border-radius: 0;
+      }
+      .card[hidden] { display: block !important; }
+      details { border-top: none; }
+      details > summary { font-size: 11pt; padding: var(--s2) 0 0; min-height: 0; }
+      .chev { display: none; }
+      .print-only { display: block; }
+      .print-field {
+        margin: var(--s2) 0 0;
+        font-size: 10pt;
+        color: var(--ink);
+      }
+      .print-field b { font-weight: 600; }
+      .print-notes { white-space: pre-wrap; }
+      .resource-link {
+        border: none;
+        padding: 2px 0;
+        min-height: 0;
+        background: none;
+        display: block;
+        font-size: 9pt;
+      }
+      .resource-link .ext { display: none; }
+      /* Links are the point of this document — print the destinations */
+      .resource-link::after {
+        content: " — " attr(href);
+        color: var(--ink-muted);
+        word-break: break-all;
+      }
+      pre { max-height: none; overflow: visible; border: 1px solid var(--line); font-size: 8pt; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#vendorGrid">Aller à la liste des fournisseurs</a>
+
+  <main class="shell" id="top">
+    <header class="hero">
+      <div class="hero-main">
+        <h1>Suivi des DPA<br>fournisseurs</h1>
+        <p class="hero-copy">
+          Chaque fournisseur qui touche à des données personnelles de Banana TV, la démarche exacte
+          à suivre, les liens officiels, un statut et vos notes. Tout est enregistré dans ce
+          navigateur uniquement&nbsp;: pensez à télécharger une sauvegarde.
+        </p>
+      </div>
+
+      <aside class="hero-side" aria-label="Progression">
+        <div>
+          <div class="progress-head">
+            <span class="progress-label" id="progressLabel">Dossiers terminés</span>
+            <span class="progress-number"><span id="progressCount">0</span><span class="of">/<span id="totalCount">21</span></span></span>
+          </div>
+          <div class="progress-bar" id="progressBar" role="img" aria-labelledby="progressLabel"></div>
+          <ul class="legend" id="legend"></ul>
+        </div>
+        <div class="hero-actions">
+          <button class="button dark" id="printButton" type="button">Imprimer / PDF</button>
+          <button class="button" id="exportButton" type="button">Sauvegarder</button>
+        </div>
+      </aside>
+    </header>
+
+    <section class="toolbar" aria-label="Filtres">
+      <label class="visually-hidden" for="searchInput">Rechercher</label>
+      <input id="searchInput" class="search" type="search" autocomplete="off" placeholder="Rechercher un fournisseur, une démarche, un lien…  ( / )">
+      <select id="categoryFilter" class="filter-select" aria-label="Filtrer par catégorie">
+        <option value="all">Toutes les catégories</option>
+        <option value="AI">AI</option>
+        <option value="AI & Voice">AI & Voice</option>
+        <option value="Automation">Automation</option>
+        <option value="Cloud & Productivity">Cloud & Productivity</option>
+        <option value="CRM & Support">CRM & Support</option>
+        <option value="Database">Database</option>
+        <option value="Design">Design</option>
+        <option value="Development">Development</option>
+        <option value="Hosting">Hosting</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Telephony">Telephony</option>
+      </select>
+      <select id="statusFilter" class="filter-select" aria-label="Filtrer par statut">
+        <option value="all">Tous les statuts</option>
+        <option value="not-started">À faire</option>
+        <option value="in-progress">En cours</option>
+        <option value="waiting">En attente</option>
+        <option value="completed">Terminé</option>
+        <option value="not-applicable">Non applicable</option>
+      </select>
+      <p class="result-count" id="resultCount" role="status">21 fournisseurs</p>
+    </section>
+
+    <div class="section-head">
+      <h2 class="section-title" id="vendorsTitle">Fournisseurs</h2>
+      <p class="section-note">Cochez un fournisseur pour le marquer terminé, ou choisissez un statut plus précis en bas de chaque fiche.</p>
+    </div>
+
+    <section class="grid" id="vendorGrid" aria-labelledby="vendorsTitle">
+      
+    <article class="card vendor-card" id="v-openai" data-name="openai" data-category="AI" data-priority="Prioritaire">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">OpenAI</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-0">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour GPT via l’API OpenAI ou ChatGPT Business/Enterprise.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">AI</span>
+        <span class="pill pill-priority">Prioritaire</span>
+        <span class="pill">Signature dédiée</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Vérifier que les données clients passent par l’API OpenAI ou un espace ChatGPT Business/Enterprise.</li>
+<li>Éviter l’usage d’un compte personnel ChatGPT Plus pour le traitement régulier de données clients.</li>
+<li>Ouvrir le formulaire Ironclad et compléter les données de l’entité juridique.</li>
+<li>Télécharger le DPA exécuté et conserver l’identifiant de l’organisation OpenAI.</li>
+<li>Archiver la liste des sous-traitants et la preuve d’acceptation.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://ironcladapp.com/public-launch/63ffefa2bed6885f4536d0fe" target="_blank" rel="noopener noreferrer"><span>Exécuter le DPA via Ironclad</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://cdn.openai.com/pdf/openai-data-processing-addendum.pdf" target="_blank" rel="noopener noreferrer"><span>Télécharger le DPA PDF</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://openai.com/policies/data-processing-addendum/" target="_blank" rel="noopener noreferrer"><span>Consulter le DPA</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://platform.openai.com/subprocessors" target="_blank" rel="noopener noreferrer"><span>Sous-traitants OpenAI</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Aucun e-mail n’est normalement nécessaire. Utiliser le formulaire Ironclad. En cas de blocage, contacter le support OpenAI depuis le compte professionnel.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-0">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-0" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-n8n" data-name="n8n" data-category="Automation" data-priority="Prioritaire">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">n8n</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-1">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour n8n Cloud, Enterprise ou toute configuration donnant accès aux données à n8n.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Automation</span>
+        <span class="pill pill-priority">Prioritaire</span>
+        <span class="pill">DocuSign</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Déterminer si l’usage concerne n8n Cloud, Enterprise self-hosted ou Community auto-hébergé.</li>
+<li>Télécharger le modèle de DPA pour revue.</li>
+<li>Signer via le formulaire DocuSign officiel.</li>
+<li>Décrire les catégories de données : appels, numéros, transcriptions, données CRM et logs.</li>
+<li>Télécharger la version finale signée et archiver la liste des sous-traitants.</li>
+<li>Pour une instance totalement auto-hébergée sans accès n8n, traiter en priorité le DPA de l’hébergeur.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://n8n.io/legal/data-processing-agreement/" target="_blank" rel="noopener noreferrer"><span>Page DPA n8n</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://powerforms.docusign.net/9f400ce5-f521-460d-a6b1-74833f86c856?accountId=09907bc8-c82b-4ba1-8a2f-b7e4cb385ad0&amp;acct=09907bc8-c82b-4ba1-8a2f-b7e4cb385ad0&amp;env=na2" target="_blank" rel="noopener noreferrer"><span>Signer via DocuSign</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/Data_Processing_Agreement_n8n_Sample_590c8d703d.pdf" target="_blank" rel="noopener noreferrer"><span>Télécharger le modèle PDF</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://n8n.io/legal/sub-processors/" target="_blank" rel="noopener noreferrer"><span>Sous-traitants n8n</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://trust.n8n.io/" target="_blank" rel="noopener noreferrer"><span>Trust Center</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Aucun e-mail n’est nécessaire pour la procédure standard. Utiliser DocuSign. Contacter le support uniquement en cas de besoin contractuel spécifique.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-1">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-1" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-freshworks" data-name="freshworks" data-category="CRM &amp; Support" data-priority="Prioritaire">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Freshworks</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-2">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour Freshdesk, Freshcaller, Freshchat et fonctionnalités associées.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">CRM &amp; Support</span>
+        <span class="pill pill-priority">Prioritaire</span>
+        <span class="pill">Box Sign</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Vérifier que tous les produits sont rattachés au compte professionnel de la société.</li>
+<li>Consulter le DPA standard intégré aux conditions.</li>
+<li>Utiliser le lien Box Sign pour obtenir une version signée.</li>
+<li>Archiver la liste exacte des produits couverts et la preuve d’abonnement.</li>
+<li>Télécharger le document signé et le classer avec les conditions Freshworks.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://www.freshworks.com/data-processing-addendum/" target="_blank" rel="noopener noreferrer"><span>Consulter le DPA</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://freshworks.app.box.com/sign/ready-sign-link/7d71a550-09c8-40c1-a829-b3d8ec83ca09" target="_blank" rel="noopener noreferrer"><span>Obtenir une version signée</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.freshworks.com/terms/" target="_blank" rel="noopener noreferrer"><span>Conditions Freshworks</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Pas d’e-mail requis pour le DPA standard. Contacter l’account manager Freshworks pour toute clause personnalisée.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-2">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-2" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-elevenlabs" data-name="elevenlabs" data-category="AI &amp; Voice" data-priority="Prioritaire">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">ElevenLabs</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-3">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour les voix synthétiques, enregistrements, textes et traitements audio.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">AI &amp; Voice</span>
+        <span class="pill pill-priority">Prioritaire</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Vérifier que le compte est professionnel et enregistré au nom de l’entité juridique.</li>
+<li>Télécharger ou imprimer en PDF le DPA et les conditions européennes.</li>
+<li>Archiver la liste des sous-traitants et les informations du Trust Center.</li>
+<li>Conserver une facture ou une preuve de souscription au compte professionnel.</li>
+<li>Ajouter ElevenLabs à votre liste de sous-traitants ultérieurs communiquée aux clients.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://elevenlabs.io/dpa" target="_blank" rel="noopener noreferrer"><span>DPA ElevenLabs</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://elevenlabs.io/terms-of-use-eu" target="_blank" rel="noopener noreferrer"><span>Conditions européennes</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://compliance.elevenlabs.io/" target="_blank" rel="noopener noreferrer"><span>Trust Center</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://elevenlabs.io/enterprise" target="_blank" rel="noopener noreferrer"><span>Contact Enterprise</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">La signature séparée n’est généralement pas nécessaire. Pour une version personnalisée ou contresignée, passer par l’offre Enterprise.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-3">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-3" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-anthropic" data-name="anthropic" data-category="AI" data-priority="Selon usage">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Anthropic</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-4">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour Claude API, Claude for Work ou Enterprise.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">AI</span>
+        <span class="pill">Selon usage</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Utiliser un produit commercial Anthropic pour les données clients.</li>
+<li>Télécharger ou imprimer le DPA et les Commercial Terms.</li>
+<li>Archiver la facture, la preuve d’acceptation et les informations du Trust Center.</li>
+<li>Si Claude est utilisé via AWS Bedrock, Google Vertex AI ou Azure, documenter le contrat de la plateforme intermédiaire.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://www.anthropic.com/legal/data-processing-addendum" target="_blank" rel="noopener noreferrer"><span>DPA Anthropic</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.anthropic.com/legal/commercial-terms" target="_blank" rel="noopener noreferrer"><span>Commercial Terms</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://trust.anthropic.com/" target="_blank" rel="noopener noreferrer"><span>Trust Center</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://support.claude.com/en/articles/9015913-how-to-get-support" target="_blank" rel="noopener noreferrer"><span>Support Anthropic</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">La signature séparée n’est normalement pas requise pour le contrat commercial standard.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-4">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-4" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-supabase" data-name="supabase" data-category="Database" data-priority="Prioritaire">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Supabase</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-5">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour la base de données, l’authentification, le stockage et les logs.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Database</span>
+        <span class="pill pill-priority">Prioritaire</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Vérifier les données légales de facturation du compte.</li>
+<li>Télécharger ou imprimer le DPA en vigueur.</li>
+<li>Archiver les conditions de service, la facture et la liste des sous-traitants.</li>
+<li>Documenter la région de chaque projet, les sauvegardes et la politique de rétention.</li>
+<li>S’abonner aux notifications de changement de sous-traitants.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://supabase.com/legal/customer-resources/data-processing-addendum" target="_blank" rel="noopener noreferrer"><span>DPA Supabase</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://supabase.com/terms" target="_blank" rel="noopener noreferrer"><span>Conditions Supabase</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://supabase.com/legal/customer-resources/subprocessor-list" target="_blank" rel="noopener noreferrer"><span>Sous-traitants</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://supabase.com/legal" target="_blank" rel="noopener noreferrer"><span>Portail juridique</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Pour une demande de version contresignée ou une question de protection des données : privacy@supabase.io</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-5">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-5" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-twilio" data-name="twilio" data-category="Telephony" data-priority="Prioritaire">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Twilio</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-6">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour les appels, numéros, SIP, enregistrements, transcriptions, messages et logs.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Telephony</span>
+        <span class="pill pill-priority">Prioritaire</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Vérifier l’entité de facturation du compte Twilio.</li>
+<li>Télécharger ou imprimer le DPA et les conditions Twilio.</li>
+<li>Lister les produits utilisés : Voice, SIP Trunking, Recording, Messaging, SendGrid, etc.</li>
+<li>Configurer MFA, TLS/SRTP, chiffrement et durées de conservation quand disponibles.</li>
+<li>Archiver la liste des sous-traitants et les preuves contractuelles.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://www.twilio.com/en-us/legal/data-protection-addendum" target="_blank" rel="noopener noreferrer"><span>DPA Twilio</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.twilio.com/en-us/legal/tos" target="_blank" rel="noopener noreferrer"><span>Conditions Twilio</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.twilio.com/en-us/legal" target="_blank" rel="noopener noreferrer"><span>Centre juridique</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.twilio.com/en-us/legal/sub-processors" target="_blank" rel="noopener noreferrer"><span>Sous-traitants Twilio</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.twilio.com/en-us/legal/privacy" target="_blank" rel="noopener noreferrer"><span>Politique de confidentialité</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Pour une question contractuelle ou une copie spécifique : account manager, support Twilio ou privacy@twilio.com</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-6">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-6" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-microsoft" data-name="microsoft" data-category="Cloud &amp; Productivity" data-priority="Selon usage">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Microsoft</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-7">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour Microsoft 365, Azure et Azure OpenAI.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Cloud &amp; Productivity</span>
+        <span class="pill">Selon usage</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Vérifier le tenant Microsoft et l’entité de facturation.</li>
+<li>Télécharger le Microsoft Products and Services DPA.</li>
+<li>Archiver le Microsoft Customer Agreement, les Product Terms, l’identifiant du tenant et la facture.</li>
+<li>Documenter les régions Azure utilisées.</li>
+<li>Pour Azure OpenAI, conserver les paramètres de journalisation, de rétention et la région de la ressource.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://aka.ms/dpa" target="_blank" rel="noopener noreferrer"><span>Télécharger le DPA Microsoft</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://azure.microsoft.com/en-gb/support/legal" target="_blank" rel="noopener noreferrer"><span>Informations juridiques Azure</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.microsoft.com/en-gb/trust-center/privacy" target="_blank" rel="noopener noreferrer"><span>Microsoft Trust Center</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Aucun e-mail n’est normalement requis pour les conditions standard.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-7">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-7" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-github" data-name="github" data-category="Development" data-priority="Selon usage">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">GitHub</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-8">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour GitHub Team, Enterprise, Codespaces et Copilot.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Development</span>
+        <span class="pill">Selon usage</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Utiliser une organisation GitHub appartenant à la société.</li>
+<li>Éviter les comptes personnels non administrés pour les dépôts clients.</li>
+<li>Archiver le Customer Agreement, le DPA, les conditions Copilot et les factures.</li>
+<li>Documenter quels dépôts contiennent des données personnelles ou des secrets clients.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://github.com/customer-terms/github-data-protection-agreement" target="_blank" rel="noopener noreferrer"><span>DPA GitHub</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://github.com/customer-terms" target="_blank" rel="noopener noreferrer"><span>GitHub Customer Agreement</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://github.com/customer-terms/github-copilot-product-specific-terms" target="_blank" rel="noopener noreferrer"><span>Conditions GitHub Copilot</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">La signature séparée n’est généralement pas nécessaire.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-8">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-8" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-figma" data-name="figma" data-category="Design" data-priority="Selon usage">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Figma</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-9">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour les maquettes contenant des informations clients ou utilisateurs.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Design</span>
+        <span class="pill">Selon usage</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Vérifier que l’espace Figma appartient à la société.</li>
+<li>Archiver le DPA, les conditions du plan, la facture et la liste des administrateurs.</li>
+<li>Éviter de placer des données sensibles ou médicales dans les maquettes.</li>
+<li>Conserver la liste des sous-traitants.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://www.figma.com/legal/dpa/" target="_blank" rel="noopener noreferrer"><span>DPA Figma</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.figma.com/sub-processors" target="_blank" rel="noopener noreferrer"><span>Sous-traitants Figma</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.figma.com/legal/privacy-and-data-protection/" target="_blank" rel="noopener noreferrer"><span>Privacy &amp; Data Protection</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">La signature séparée n’est normalement pas nécessaire.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-9">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-9" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-canva" data-name="canva" data-category="Design" data-priority="Selon usage">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Canva</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-10">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour les créations, fichiers et dossiers clients hébergés dans Canva.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Design</span>
+        <span class="pill">Selon usage</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Utiliser un espace Canva Business ou Team appartenant à la société.</li>
+<li>Archiver le DPA, les conditions Canva Business, la facture et les mesures de sécurité.</li>
+<li>Vérifier les droits d’accès et éviter les liens publics non nécessaires.</li>
+<li>Conserver la liste des sous-traitants.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://www.canva.com/policies/data-processing-addendum/" target="_blank" rel="noopener noreferrer"><span>DPA Canva</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.canva.com/policies/subprocessors/" target="_blank" rel="noopener noreferrer"><span>Sous-traitants Canva</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.canva.com/trust/privacy/" target="_blank" rel="noopener noreferrer"><span>Trust Center Canva</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Pour une question juridique ou vie privée : privacy@canva.com</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-10">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-10" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-google-workspace" data-name="google workspace" data-category="Cloud &amp; Productivity" data-priority="Prioritaire">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Google Workspace</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-11">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour Gmail professionnel, Drive, Calendar, Meet et services Workspace.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Cloud &amp; Productivity</span>
+        <span class="pill pill-priority">Prioritaire</span>
+        <span class="pill">Acceptation dans l’Admin Console</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Se connecter avec un compte Super Admin.</li>
+<li>Ouvrir : Account → Account settings → Legal and compliance → Security and Privacy Additional Terms.</li>
+<li>Examiner et accepter le Cloud Data Processing Addendum.</li>
+<li>Télécharger le document et faire une capture de la date d’acceptation.</li>
+<li>Archiver l’identifiant du tenant et la facture.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://cloud.google.com/terms/data-processing-addendum" target="_blank" rel="noopener noreferrer"><span>Cloud Data Processing Addendum</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://knowledge.workspace.google.com/admin/compliance/privacy-compliance-and-records-for-google-workspace-and-cloud-identity" target="_blank" rel="noopener noreferrer"><span>Procédure Google Workspace</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Aucun e-mail requis si l’acceptation est disponible dans l’Admin Console.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-11">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-11" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-google-analytics" data-name="google analytics" data-category="Marketing" data-priority="Selon usage">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Google Analytics</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-12">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour les données de mesure, cookies, événements et identifiants Analytics.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Marketing</span>
+        <span class="pill">Selon usage</span>
+        <span class="pill">Acceptation dans l’interface</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Se connecter avec un rôle Editor au niveau du compte.</li>
+<li>Ouvrir Admin → Account Settings → Data Processing Amendment.</li>
+<li>Examiner et accepter l’amendement.</li>
+<li>Archiver une capture de l’acceptation et la configuration de conservation des données.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://support.google.com/analytics/answer/3379636" target="_blank" rel="noopener noreferrer"><span>Procédure Google Analytics</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Aucun e-mail requis pour la procédure standard.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-12">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-12" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-google-tag-manager" data-name="google tag manager" data-category="Marketing" data-priority="Selon usage">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Google Tag Manager</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-13">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour le déploiement des tags et la collecte technique via les conteneurs.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Marketing</span>
+        <span class="pill">Selon usage</span>
+        <span class="pill">Conditions produit</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Vérifier l’entité propriétaire du compte et du conteneur.</li>
+<li>Consulter et archiver le Data Processing Amendment applicable.</li>
+<li>Documenter les tags actifs, les destinations et les données envoyées.</li>
+<li>Conserver la configuration du consentement et les règles de déclenchement.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://support.google.com/tagmanager/answer/7207086" target="_blank" rel="noopener noreferrer"><span>Amendement Google Tag Manager</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Aucun e-mail requis pour la procédure standard.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-13">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-13" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-google-ads" data-name="google ads" data-category="Marketing" data-priority="Selon usage">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Google Ads</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-14">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Google peut agir comme responsable indépendant ou sous-traitant selon la fonctionnalité.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Marketing</span>
+        <span class="pill">Selon usage</span>
+        <span class="pill">Rôles multiples</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Identifier les fonctionnalités utilisées : Ads, Customer Match, Enhanced Conversions, remarketing, etc.</li>
+<li>Archiver les Google Ads Data Processing Terms et les Controller-Controller Terms.</li>
+<li>Documenter le rôle RGPD applicable à chaque fonctionnalité.</li>
+<li>Conserver les paramètres de consentement, les audiences et les sources de données.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://business.safety.google/gdpr/" target="_blank" rel="noopener noreferrer"><span>Google Ads Data Processing Terms</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://business.safety.google/controllerterms/" target="_blank" rel="noopener noreferrer"><span>Google Controller-Controller Terms</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Pas de demande de DPA général : les rôles et conditions varient selon les fonctionnalités.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-14">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-14" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-meta" data-name="meta" data-category="Marketing" data-priority="Selon usage">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Meta</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-15">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour Meta Ads, Pixel, Conversions API, Lead Ads et outils professionnels.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Marketing</span>
+        <span class="pill">Selon usage</span>
+        <span class="pill">Conditions produit</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Vérifier que le Business Portfolio appartient à la société.</li>
+<li>Compléter les informations légales du compte.</li>
+<li>Archiver les Business Tools Terms, Data Processing Terms et l’EU Data Transfer Addendum.</li>
+<li>Vérifier séparément les conditions Lead Ads.</li>
+<li>Documenter les rôles RGPD par fonctionnalité.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://www.facebook.com/legal/terms/dataprocessing" target="_blank" rel="noopener noreferrer"><span>Meta Data Processing Terms</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.facebook.com/legal/technology_terms" target="_blank" rel="noopener noreferrer"><span>Meta Business Tools Terms</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.facebook.com/legal/EU_data_transfer_addendum" target="_blank" rel="noopener noreferrer"><span>EU Data Transfer Addendum</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.facebook.com/business/help/829597887147190" target="_blank" rel="noopener noreferrer"><span>Conditions Lead Ads</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">La signature séparée n’est normalement pas nécessaire.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-15">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-15" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-proximus" data-name="proximus" data-category="Telephony" data-priority="Prioritaire">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Proximus</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-16">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour SIP trunk, SBC, routage, logs, support, hébergement et accès techniques.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Telephony</span>
+        <span class="pill pill-priority">Prioritaire</span>
+        <span class="pill">Demande au fournisseur</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Écrire à l’account manager Proximus en précisant les produits concernés.</li>
+<li>Demander l’annexe article 28 du RGPD pour les services où Proximus agit comme sous-traitant.</li>
+<li>Demander la qualification des rôles pour les données de trafic et de télécommunication.</li>
+<li>Demander les sous-traitants, lieux de traitement, durées de conservation, mesures de sécurité et mécanismes de transfert.</li>
+<li>En l’absence de réponse claire, mettre privacy@proximus.com en copie.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://www.proximus.be/en/id_cr_privacy_policy/personal/orphans/privacy-policy.html" target="_blank" rel="noopener noreferrer"><span>Politique de confidentialité Proximus</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Envoyer le modèle d’e-mail Proximus inclus plus bas à l’account manager. Mettre privacy@proximus.com en copie si nécessaire.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-16">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-16" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-aws" data-name="aws" data-category="Hosting" data-priority="Selon hébergement">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">AWS</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-17">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour les services cloud, hébergement, stockage, logs et sauvegardes AWS.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Hosting</span>
+        <span class="pill">Selon hébergement</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Télécharger et archiver l’AWS Data Processing Addendum.</li>
+<li>Conserver l’Account ID, les régions utilisées et les services actifs.</li>
+<li>Documenter le chiffrement, les sauvegardes et les durées de conservation.</li>
+<li>Archiver la liste des sous-traitants et la preuve d’abonnement.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://docs.aws.amazon.com/whitepapers/latest/navigating-gdpr-compliance/aws-data-processing-addendum-dpa.html" target="_blank" rel="noopener noreferrer"><span>AWS DPA</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Aucun e-mail requis pour les conditions standard.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-17">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-17" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-google-cloud" data-name="google cloud" data-category="Hosting" data-priority="Selon hébergement">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Google Cloud</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-18">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour GCP, Vertex AI, stockage, bases, compute et logs.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Hosting</span>
+        <span class="pill">Selon hébergement</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Archiver le Cloud Data Processing Addendum.</li>
+<li>Conserver l’Organization ID, les Project IDs et les régions utilisées.</li>
+<li>Documenter les services, le chiffrement et les politiques de rétention.</li>
+<li>Conserver les preuves contractuelles et de facturation.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://cloud.google.com/terms/data-processing-addendum" target="_blank" rel="noopener noreferrer"><span>Google Cloud DPA</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Aucun e-mail requis pour les conditions standard.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-18">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-18" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-hetzner" data-name="hetzner" data-category="Hosting" data-priority="Selon hébergement">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Hetzner</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-19">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour serveurs, stockage, sauvegardes et infrastructure Hetzner.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Hosting</span>
+        <span class="pill">Selon hébergement</span>
+        <span class="pill">À conclure dans le portail</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Se connecter au portail client Hetzner.</li>
+<li>Conclure le DPA séparément dans les paramètres contractuels.</li>
+<li>Télécharger le PDF et la preuve de conclusion.</li>
+<li>Documenter les serveurs, régions, sauvegardes et accès d’administration.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://www.hetzner.com/AV/DPA_en.pdf" target="_blank" rel="noopener noreferrer"><span>Télécharger le DPA Hetzner</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://docs.hetzner.com/general/company-and-policy/data-protection-at-hetzner/" target="_blank" rel="noopener noreferrer"><span>Procédure Hetzner</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Aucun e-mail requis si la conclusion est disponible dans le portail.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-19">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-19" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-ovhcloud" data-name="ovhcloud" data-category="Hosting" data-priority="Selon hébergement">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">OVHcloud</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-20">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour serveurs, cloud, stockage et sauvegardes OVHcloud.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Hosting</span>
+        <span class="pill">Selon hébergement</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Identifier l’entité OVHcloud contractante et la région du compte.</li>
+<li>Télécharger et archiver le DPA applicable.</li>
+<li>Conserver les informations des services, datacenters, sauvegardes et accès support.</li>
+<li>Archiver les factures et la preuve d’acceptation.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://us.ovhcloud.com/legal/data-processing-agreement/" target="_blank" rel="noopener noreferrer"><span>OVHcloud DPA</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Contacter le support ou l’account manager si une version liée à l’entité européenne est requise.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-20">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-20" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+      <div class="empty" id="emptyState">
+        <p>Aucun fournisseur ne correspond à cette recherche.</p>
+        <button class="button" id="resetFilters" type="button">Réinitialiser les filtres</button>
+      </div>
+    </section>
+
+    <div class="section-head">
+      <h2 class="section-title" id="emailsTitle">Modèles d’e-mails</h2>
+      <p class="section-note">Complétez les champs entre crochets avant l’envoi.</p>
+    </div>
+
+    <section class="email-grid" aria-labelledby="emailsTitle">
+      <article class="email-card">
+        <h3>Demande générique de DPA</h3>
+        <p>À utiliser lorsqu’un fournisseur demande une sollicitation au support ou lorsqu’une version contresignée est requise.</p>
+        <div class="email-toolbar">
+          <button class="button dark copy-email" data-target="genericEmail">Copier l’e-mail</button>
+          <a class="button" href="mailto:?subject=Request%20for%20executed%20Data%20Processing%20Addendum">Ouvrir l’e-mail</a>
+        </div>
+        <pre id="genericEmail" lang="en">Dear Privacy or Legal Team,
+
+We use your services as part of our professional activities and may process personal data relating to our clients, their employees, prospects and end users through your platform.
+
+We would therefore like to obtain the current Data Processing Addendum applicable to our account, including the relevant Standard Contractual Clauses and information regarding your subprocessors.
+
+Our company details are as follows:
+
+Legal entity: [LEGAL ENTITY]
+Company/VAT number: [VAT NUMBER]
+Registered address: [REGISTERED ADDRESS]
+Authorized signatory: [AUTHORIZED SIGNATORY]
+Account e-mail: [ACCOUNT E-MAIL]
+Customer, workspace or organization ID: [ACCOUNT ID]
+
+Please confirm:
+
+1. whether your DPA is automatically incorporated into our existing agreement;
+2. whether a countersigned copy is available;
+3. which legal entity provides the services to our Belgian company;
+4. the applicable international data-transfer mechanism;
+5. where we can access your current subprocessor list and technical and organizational measures;
+6. how we can subscribe to notifications regarding changes to subprocessors.
+
+Where a signature is required, please send the execution link or countersigned document to the authorized signatory indicated above.
+
+Kind regards,
+
+Svetlana Totolina
+Banana TV
+[JOB TITLE]
+[PROFESSIONAL E-MAIL]
+[TELEPHONE]</pre>
+      </article>
+
+      <article class="email-card">
+        <h3>Demande spécifique Proximus</h3>
+        <p>À envoyer à l’account manager, avec privacy@proximus.com en copie si la réponse contractuelle reste incomplète.</p>
+        <div class="email-toolbar">
+          <button class="button dark copy-email" data-target="proximusEmail">Copier l’e-mail</button>
+          <a class="button" href="mailto:privacy@proximus.com?subject=Demande%20d%E2%80%99annexe%20de%20traitement%20des%20donn%C3%A9es%20%E2%80%93%20services%20SIP%2FSBC">Ouvrir l’e-mail</a>
+        </div>
+        <pre id="proximusEmail">Bonjour,
+
+Dans le cadre de la mise en conformité RGPD de Banana TV, nous souhaitons obtenir les documents contractuels applicables au traitement des données personnelles réalisé par Proximus dans le cadre de nos services professionnels.
+
+Notre environnement est susceptible d’utiliser notamment les services suivants :
+
+- SIP trunk et numéros téléphoniques ;
+- SBC et routage des appels ;
+- journaux d’appels et données de trafic ;
+- éventuels enregistrements ou contenus de communications ;
+- services d’hébergement, de support, de maintenance et d’administration technique.
+
+Pouvez-vous nous transmettre, pour chacun des services concernés :
+
+1. l’annexe relative au traitement des données conformément à l’article 28 du RGPD, lorsqu’elle est applicable ;
+2. la qualification des rôles respectifs de Proximus et de Banana TV pour chaque catégorie de données ;
+3. la liste des sous-traitants ultérieurs ;
+4. les pays ou régions dans lesquels les données peuvent être stockées ou consultées ;
+5. les mesures techniques et organisationnelles applicables ;
+6. les durées de conservation des journaux d’appels, CDR, données de trafic et éventuels enregistrements ;
+7. le délai contractuel de notification en cas de violation de données ;
+8. les mécanismes utilisés pour les éventuels transferts de données hors de l’Espace économique européen.
+
+Informations de notre société :
+
+[LEGAL ENTITY]
+N° d’entreprise/TVA : [VAT NUMBER]
+[REGISTERED ADDRESS]
+Belgique
+
+Merci également de nous indiquer si ces documents sont déjà incorporés à notre contrat actuel ou si une signature distincte est nécessaire.
+
+Bien à vous,
+
+Svetlana Totolina
+Banana TV
+[FONCTION]
+[E-MAIL PROFESSIONNEL]
+[TÉLÉPHONE]</pre>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <p>
+        <strong>Classement.</strong> Pour chaque fournisseur, conservez le DPA, la preuve d’acceptation,
+        la facture, les conditions applicables, la liste des sous-traitants, les mesures techniques et
+        organisationnelles, la date de téléchargement et l’identifiant du compte. Vérifiez toujours que
+        le nom de l’entité juridique correspond à celui du contrat fournisseur.
+      </p>
+      <p>
+        <strong>Vos données.</strong> Statuts et notes sont enregistrés dans ce navigateur, sur cet
+        appareil. Ils ne sont envoyés nulle part et ne suivent pas d’un poste à l’autre&nbsp;: exportez une
+        sauvegarde avant de changer de machine ou de vider le cache.
+      </p>
+      <p class="print-only print-stamp" id="printStamp"></p>
+      <div class="footer-actions">
+        <button class="button quiet" id="importButton" type="button">Restaurer une sauvegarde</button>
+        <button class="button quiet" id="exportCsvButton" type="button">Exporter en CSV</button>
+        <button class="button quiet danger" id="resetButton" type="button">Effacer les données locales</button>
+        <input id="importInput" class="visually-hidden" type="file" accept="application/json,.json" tabindex="-1" aria-hidden="true">
+      </div>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    /* ---------------------------------------------------------------
+       State lives in this browser only. Everything below is built so
+       that state is visible (status colour on every card), recoverable
+       (JSON backup in / out) and printable (archive copy).
+    ---------------------------------------------------------------- */
+
+    const STORAGE_KEY = "banana-tv-dpa-contracts-v1";
+
+    const STATUS = {
+      "not-started": "À faire",
+      "in-progress": "En cours",
+      waiting: "En attente fournisseur",
+      completed: "Terminé",
+      "not-applicable": "Non applicable",
+    };
+    const STATUS_ORDER = ["completed", "in-progress", "waiting", "not-applicable", "not-started"];
+
+    const cards = [...document.querySelectorAll(".vendor-card")];
+    const searchInput = document.getElementById("searchInput");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const statusFilter = document.getElementById("statusFilter");
+    const emptyState = document.getElementById("emptyState");
+    const resultCount = document.getElementById("resultCount");
+    const progressCount = document.getElementById("progressCount");
+    const progressBar = document.getElementById("progressBar");
+    const legend = document.getElementById("legend");
+    const toast = document.getElementById("toast");
+    const importInput = document.getElementById("importInput");
+
+    const keyOf = (card) => card.querySelector(".status-select").dataset.key;
+    const nameOf = (card) => card.querySelector(".vendor-name").textContent.trim();
+
+    /* --- Persistence ------------------------------------------------ */
+
+    function readState() {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        return parsed && typeof parsed === "object" ? parsed : {};
+      } catch {
+        return {};
+      }
+    }
+
+    let state = readState();
+    let storageWorks = true;
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch {
+        if (storageWorks) {
+          storageWorks = false;
+          showToast("Sauvegarde impossible dans ce navigateur — exportez vos notes");
+        }
+      }
+    }
+
+    function patch(key, changes) {
+      state[key] = { ...(state[key] || {}), ...changes };
+      saveState();
+    }
+
+    const statusOf = (key) => (STATUS[state[key]?.status] ? state[key].status : "not-started");
+
+    /* --- Toast ------------------------------------------------------ */
+
+    let toastTimer;
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("show"), 2600);
+    }
+
+    /* --- Search index ------------------------------------------------
+       textContent, not innerText: collapsed <details> hold the steps and
+       the links, and those must stay searchable.
+    ------------------------------------------------------------------ */
+
+    const searchIndex = new Map(
+      cards.map((card) => [card, card.textContent.replace(/\s+/g, " ").toLowerCase()])
+    );
+
+    /* --- Per-card rendering ------------------------------------------ */
+
+    function renderCard(card) {
+      const key = keyOf(card);
+      const status = statusOf(key);
+      const done = status === "completed";
+
+      card.dataset.status = status;
+      card.classList.toggle("is-done", done);
+      card.querySelector(".status-flag-label").textContent = STATUS[status];
+      card.querySelector(".dot").dataset.status = status;
+
+      const check = card.querySelector(".done-check");
+      check.checked = done;
+      check.setAttribute("aria-label", `${nameOf(card)} — marquer comme terminé`);
+
+      const select = card.querySelector(".status-select");
+      if (select.value !== status) select.value = status;
+
+      const notes = card.querySelector(".notes");
+      if (notes.value !== (state[key]?.notes || "")) notes.value = state[key]?.notes || "";
+    }
+
+    /* --- Aggregates ---------------------------------------------------
+       Bar and legend are built once, then only their values change.
+    -------------------------------------------------------------------- */
+
+    const segments = new Map();
+    const legendCounts = new Map();
+
+    STATUS_ORDER.forEach((status) => {
+      if (status !== "not-started") {
+        const seg = document.createElement("div");
+        seg.className = "progress-seg";
+        seg.dataset.status = status;
+        segments.set(status, seg);
+        progressBar.append(seg);
+      }
+
+      const item = document.createElement("li");
+      const dot = document.createElement("span");
+      dot.className = "dot";
+      dot.dataset.status = status;
+      const label = document.createElement("span");
+      legendCounts.set(status, label);
+      item.append(dot, label);
+      legend.append(item);
+    });
+
+    function renderProgress() {
+      const counts = Object.fromEntries(Object.keys(STATUS).map((s) => [s, 0]));
+      cards.forEach((card) => counts[statusOf(keyOf(card))]++);
+
+      const total = cards.length;
+      const handled = total - counts["not-started"];
+      progressCount.textContent = counts.completed;
+
+      segments.forEach((seg, status) => {
+        seg.style.width = `${(counts[status] / total) * 100}%`;
+      });
+
+      legendCounts.forEach((node, status) => {
+        node.textContent = `${counts[status]} ${STATUS[status].toLowerCase()}`;
+        node.parentElement.dataset.empty = String(counts[status] === 0);
+      });
+
+      progressBar.setAttribute(
+        "aria-label",
+        `${counts.completed} terminés, ${handled - counts.completed} en cours de traitement, ${counts["not-started"]} non démarrés sur ${total}`
+      );
+    }
+
+    /* --- Filtering ---------------------------------------------------- */
+
+    function applyFilters() {
+      const query = searchInput.value.trim().toLowerCase();
+      const category = categoryFilter.value;
+      const status = statusFilter.value;
+      let visible = 0;
+
+      cards.forEach((card) => {
+        const matches =
+          (!query || searchIndex.get(card).includes(query)) &&
+          (category === "all" || card.dataset.category === category) &&
+          (status === "all" || statusOf(keyOf(card)) === status);
+        card.hidden = !matches;
+        if (matches) visible++;
+      });
+
+      emptyState.classList.toggle("show", visible === 0);
+      const filtered = visible !== cards.length;
+      resultCount.textContent = filtered
+        ? `${visible} sur ${cards.length}`
+        : `${cards.length} fournisseurs`;
+    }
+
+    function resetFilters() {
+      searchInput.value = "";
+      categoryFilter.value = "all";
+      statusFilter.value = "all";
+      applyFilters();
+      searchInput.focus();
+    }
+
+    /* --- Events -------------------------------------------------------- */
+
+    cards.forEach((card) => {
+      const key = keyOf(card);
+
+      card.querySelector(".done-check").addEventListener("change", (event) => {
+        const next = event.target.checked ? "completed" : "not-started";
+        patch(key, { status: next, done: event.target.checked });
+        renderCard(card);
+        renderProgress();
+        applyFilters();
+      });
+
+      card.querySelector(".status-select").addEventListener("change", (event) => {
+        patch(key, { status: event.target.value, done: event.target.value === "completed" });
+        renderCard(card);
+        renderProgress();
+        applyFilters();
+      });
+
+      const notes = card.querySelector(".notes");
+      const hint = card.querySelector(".saved-hint");
+      let notesTimer;
+      notes.addEventListener("input", () => {
+        clearTimeout(notesTimer);
+        notesTimer = setTimeout(() => {
+          patch(key, { notes: notes.value });
+          searchIndex.set(card, card.textContent.replace(/\s+/g, " ").toLowerCase() + " " + notes.value.toLowerCase());
+          hint.classList.add("show");
+          setTimeout(() => hint.classList.remove("show"), 1400);
+        }, 350);
+      });
+      notes.addEventListener("blur", () => {
+        clearTimeout(notesTimer);
+        patch(key, { notes: notes.value });
+      });
+    });
+
+    [searchInput, categoryFilter, statusFilter].forEach((control) => {
+      control.addEventListener("input", applyFilters);
+      control.addEventListener("change", applyFilters);
+    });
+
+    document.getElementById("resetFilters").addEventListener("click", resetFilters);
+
+    searchInput.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && searchInput.value) resetFilters();
+    });
+
+    // "/" focuses search, the convention users already have from other tools.
+    document.addEventListener("keydown", (event) => {
+      const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "");
+      if (event.key === "/" && !typing && !event.metaKey && !event.ctrlKey) {
+        event.preventDefault();
+        searchInput.focus();
+      }
+    });
+
+    /* --- Copy e-mail ----------------------------------------------------- */
+
+    document.querySelectorAll(".copy-email").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const target = document.getElementById(button.dataset.target);
+        try {
+          await navigator.clipboard.writeText(target.textContent);
+          showToast("E-mail copié dans le presse-papiers");
+        } catch {
+          const selection = window.getSelection();
+          const range = document.createRange();
+          range.selectNodeContents(target);
+          selection.removeAllRanges();
+          selection.addRange(range);
+          showToast("Texte sélectionné — copiez-le avec ⌘C");
+        }
+      });
+    });
+
+    /* --- Export / import / reset ------------------------------------------ */
+
+    function snapshot() {
+      return {
+        format: "banana-tv-dpa-contracts",
+        version: 2,
+        exportedAt: new Date().toISOString(),
+        vendors: cards.map((card) => {
+          const key = keyOf(card);
+          const status = statusOf(key);
+          return {
+            key,
+            supplier: nameOf(card),
+            category: card.dataset.category,
+            priority: card.dataset.priority,
+            status,
+            statusLabel: STATUS[status],
+            completed: status === "completed",
+            notes: state[key]?.notes || "",
+          };
+        }),
+      };
+    }
+
+    function download(blob, filename) {
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    const stamp = () => new Date().toISOString().slice(0, 10);
+
+    document.getElementById("exportButton").addEventListener("click", () => {
+      download(
+        new Blob([JSON.stringify(snapshot(), null, 2)], { type: "application/json" }),
+        `banana-tv-dpa-${stamp()}.json`
+      );
+      showToast("Sauvegarde JSON téléchargée");
+    });
+
+    document.getElementById("exportCsvButton").addEventListener("click", () => {
+      const cell = (value) => `"${String(value ?? "").replace(/"/g, '""')}"`;
+      const rows = [
+        ["Fournisseur", "Catégorie", "Priorité", "Statut", "Terminé", "Notes internes"],
+        ...snapshot().vendors.map((v) => [
+          v.supplier, v.category, v.priority, v.statusLabel, v.completed ? "oui" : "non", v.notes,
+        ]),
+      ];
+      // BOM keeps accents intact when the file is opened in Excel.
+      const csv = "﻿" + rows.map((row) => row.map(cell).join(";")).join("\r\n");
+      download(new Blob([csv], { type: "text/csv;charset=utf-8" }), `banana-tv-dpa-${stamp()}.csv`);
+      showToast("Export CSV téléchargé");
+    });
+
+    document.getElementById("importButton").addEventListener("click", () => importInput.click());
+
+    importInput.addEventListener("change", async () => {
+      const file = importInput.files?.[0];
+      if (!file) return;
+      try {
+        const data = JSON.parse(await file.text());
+        const list = Array.isArray(data?.vendors) ? data.vendors : null;
+        if (!list) throw new Error("format");
+
+        const byKey = new Map(cards.map((card) => [keyOf(card), card]));
+        const byName = new Map(cards.map((card) => [nameOf(card).toLowerCase(), card]));
+        let applied = 0;
+
+        list.forEach((entry) => {
+          const card = byKey.get(entry.key) || byName.get(String(entry.supplier || "").toLowerCase());
+          if (!card) return;
+          const status = STATUS[entry.status] ? entry.status : entry.completed ? "completed" : "not-started";
+          patch(keyOf(card), { status, done: status === "completed", notes: entry.notes || "" });
+          applied++;
+        });
+
+        cards.forEach(renderCard);
+        renderProgress();
+        applyFilters();
+        showToast(
+          applied ? `${applied} fournisseur${applied > 1 ? "s" : ""} restauré${applied > 1 ? "s" : ""}` : "Aucun fournisseur correspondant dans ce fichier"
+        );
+      } catch {
+        showToast("Fichier illisible — attendu : un export JSON de ce tableau");
+      } finally {
+        importInput.value = "";
+      }
+    });
+
+    document.getElementById("resetButton").addEventListener("click", () => {
+      const filled = cards.filter((card) => {
+        const key = keyOf(card);
+        return statusOf(key) !== "not-started" || state[key]?.notes;
+      }).length;
+      if (filled && !confirm(`Effacer les statuts et notes de ${filled} fournisseur(s) dans ce navigateur ? Cette action est irréversible — exportez d’abord une sauvegarde.`)) return;
+      state = {};
+      saveState();
+      cards.forEach(renderCard);
+      renderProgress();
+      applyFilters();
+      showToast("Données effacées dans ce navigateur");
+    });
+
+    /* --- Print: statuses and notes belong in the archive copy -------------- */
+
+    const printState = { openedDetails: [] };
+
+    function beforePrint() {
+      cards.forEach((card) => {
+        const key = keyOf(card);
+        const notes = state[key]?.notes?.trim();
+        const box = card.querySelector(".print-only");
+        box.innerHTML = "";
+
+        const status = document.createElement("p");
+        status.className = "print-field";
+        status.innerHTML = `<b>Statut :</b> ${STATUS[statusOf(key)]}`;
+        box.append(status);
+
+        if (notes) {
+          const note = document.createElement("p");
+          note.className = "print-field print-notes";
+          note.append(Object.assign(document.createElement("b"), { textContent: "Notes : " }), notes);
+          box.append(note);
+        }
+      });
+
+      document.querySelectorAll("details:not([open])").forEach((element) => {
+        element.open = true;
+        printState.openedDetails.push(element);
+      });
+
+      document.getElementById("printStamp").textContent =
+        `Document imprimé le ${new Date().toLocaleString("fr-BE", { dateStyle: "long", timeStyle: "short" })} — état du suivi à cette date.`;
+    }
+
+    function afterPrint() {
+      printState.openedDetails.forEach((element) => (element.open = false));
+      printState.openedDetails = [];
+    }
+
+    window.addEventListener("beforeprint", beforePrint);
+    window.addEventListener("afterprint", afterPrint);
+    document.getElementById("printButton").addEventListener("click", () => window.print());
+
+    /* --- Init ---------------------------------------------------------------- */
+
+    document.querySelectorAll(".resource-link").forEach((link) => {
+      const hint = document.createElement("span");
+      hint.className = "visually-hidden";
+      hint.textContent = " (nouvel onglet)";
+      link.append(hint);
+    });
+
+    document.getElementById("totalCount").textContent = cards.length;
+
+    cards.forEach(renderCard);
+    renderProgress();
+    applyFilters();
+
+    // Deep links (#v-openai) survive the filter pass.
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target?.classList.contains("vendor-card")) {
+        target.hidden = false;
+        target.scrollIntoView({ block: "center" });
+      }
+    }
+  </script>
+</body>
+</html>
