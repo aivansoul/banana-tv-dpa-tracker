@@ -461,6 +461,7 @@
     .card {
       display: flex;
       flex-direction: column;
+      min-width: 0;
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius-xl);
@@ -979,7 +980,7 @@
         <div>
           <div class="progress-head">
             <span class="progress-label" id="progressLabel">Dossiers terminés</span>
-            <span class="progress-number"><span id="progressCount">0</span><span class="of">/<span id="totalCount">21</span></span></span>
+            <span class="progress-number"><span id="progressCount">0</span><span class="of">/<span id="totalCount">26</span></span></span>
           </div>
           <div class="progress-bar" id="progressBar" role="img" aria-labelledby="progressLabel"></div>
           <ul class="legend" id="legend"></ul>
@@ -1016,7 +1017,7 @@
         <option value="completed">Terminé</option>
         <option value="not-applicable">Non applicable</option>
       </select>
-      <p class="result-count" id="resultCount" role="status">21 fournisseurs</p>
+      <p class="result-count" id="resultCount" role="status">26 fournisseurs</p>
     </section>
 
     <div class="section-head">
@@ -1145,6 +1146,70 @@
         <label class="field">
           <span>Notes internes <span class="saved-hint">enregistré</span></span>
           <textarea class="notes" data-key="vendor-1" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-zapier" data-name="zapier" data-category="Automation" data-priority="Prioritaire">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Zapier</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-21">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour les Zaps qui déplacent des données clients entre vos outils.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Automation</span>
+        <span class="pill pill-priority">Prioritaire</span>
+        <span class="pill">Intégré au contrat</span>
+        <span class="pill">Copie signée sur demande</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Recenser les Zaps qui transportent des données clients (CRM, formulaires, e-mails, transcriptions) et les applications tierces connectées.</li>
+<li>Le DPA est déjà incorporé aux Terms of Service&nbsp;: aucune signature n’est requise pour qu’il s’applique.</li>
+<li>Pour le dossier, générer une copie signée électroniquement depuis la page DPA — Zapier l’envoie via Dropbox Sign, en deux e-mails (demande de signature, puis PDF signé).</li>
+<li>Noter que Zapier, Inc. (États-Unis) est le sous-traitant&nbsp;: transferts couverts par les clauses contractuelles types (modules 2 et 3) et le Data Privacy Framework.</li>
+<li>Archiver la liste des sous-traitants&nbsp;: elle est datée et versionnée, conserver la version en vigueur.</li>
+<li>Point d’attention&nbsp;: le DPA de Zapier ne couvre plus les données une fois transférées vers une application tierce connectée. Chaque application au bout d’un Zap a besoin de son propre DPA.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://zapier.com/legal/data-processing-addendum" target="_blank" rel="noopener noreferrer"><span>DPA Zapier</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://zapier.com/legal/subprocessors" target="_blank" rel="noopener noreferrer"><span>Sous-traitants Zapier</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://zapier.com/legal/standard-contractual-clauses" target="_blank" rel="noopener noreferrer"><span>Clauses contractuelles types</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://trust.zapier.com/" target="_blank" rel="noopener noreferrer"><span>Trust Center</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://zapier.com/legal/terms-of-service" target="_blank" rel="noopener noreferrer"><span>Conditions Zapier</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Aucun e-mail n’est nécessaire pour que le DPA s’applique. Pour obtenir la copie signée, utiliser le lien de génération sur la page DPA&nbsp;: le message arrive de noreply@mail.hellosign.com, à vérifier dans les indésirables.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-21">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-21" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
         </label>
       </div>
       <div class="print-only"></div>
@@ -1568,6 +1633,69 @@
         <label class="field">
           <span>Notes internes <span class="saved-hint">enregistré</span></span>
           <textarea class="notes" data-key="vendor-8" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-linear" data-name="linear" data-category="Development" data-priority="Selon usage">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Linear</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-22">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour le suivi des tickets, si des données clients apparaissent dans les issues ou les pièces jointes.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Development</span>
+        <span class="pill">Selon usage</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Vérifier si des données personnelles de clients apparaissent dans les tickets, les descriptions, les pièces jointes ou les intégrations.</li>
+<li>Le DPA est accepté automatiquement à la signature du contrat&nbsp;: aucune démarche distincte n’est requise.</li>
+<li>Archiver le DPA daté ainsi que la liste des sous-traitants (annexe du DPA et page publique).</li>
+<li>S’abonner aux notifications d’ajout de sous-traitants dans les paramètres du compte&nbsp;: Linear prévient 30 jours à l’avance par e-mail.</li>
+<li>Noter que Linear Orbit, Inc. (États-Unis) est le sous-traitant&nbsp;: transferts couverts par les clauses contractuelles types, avec l’addendum UK pour le Royaume-Uni.</li>
+<li>Conserver les rapports de sécurité et de certification comme preuve des mesures techniques et organisationnelles.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://linear.app/dpa" target="_blank" rel="noopener noreferrer"><span>DPA Linear</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://linear.app/subprocessors" target="_blank" rel="noopener noreferrer"><span>Sous-traitants Linear</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://trust.linear.app/" target="_blank" rel="noopener noreferrer"><span>Trust Center</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://linear.app/security" target="_blank" rel="noopener noreferrer"><span>Sécurité Linear</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://linear.app/terms" target="_blank" rel="noopener noreferrer"><span>Conditions Linear</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Aucun e-mail n’est normalement nécessaire. Pour une version contresignée ou une question sur les transferts, écrire à security@linear.app. L’abonnement aux notifications de sous-traitants se règle dans les paramètres du compte.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-22">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-22" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
         </label>
       </div>
       <div class="print-only"></div>
@@ -2265,6 +2393,191 @@
         <label class="field">
           <span>Notes internes <span class="saved-hint">enregistré</span></span>
           <textarea class="notes" data-key="vendor-20" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-cloudflare" data-name="cloudflare" data-category="Hosting" data-priority="Prioritaire">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Cloudflare</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-23">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour le DNS, le CDN, le WAF, Workers ou Pages&nbsp;: Cloudflare traite les adresses IP et les journaux de requêtes de tous vos visiteurs.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Hosting</span>
+        <span class="pill pill-priority">Prioritaire</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Recenser les services actifs (proxy DNS, WAF, Workers, Pages, R2, Zero Trust) et ceux qui reçoivent du trafic visiteur.</li>
+<li>Le DPA fait partie du contrat Cloudflare&nbsp;: il s’applique sans signature distincte pour un compte self-serve.</li>
+<li>Archiver le DPA daté et la preuve d’acceptation des conditions.</li>
+<li>Noter que Cloudflare, Inc. (États-Unis) est l’importateur&nbsp;: transferts couverts par les clauses contractuelles types (modules 2 et 3) et le EU-U.S. Data Privacy Framework.</li>
+<li>Archiver la liste des sous-traitants&nbsp;: Cloudflare notifie tout ajout au moins 30 jours à l’avance.</li>
+<li>Vérifier la durée de conservation des journaux et, si la localisation des données dans l’UE est requise, l’option Data Localization Suite.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://www.cloudflare.com/cloudflare-customer-dpa/" target="_blank" rel="noopener noreferrer"><span>DPA Cloudflare</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.cloudflare.com/gdpr/subprocessors/" target="_blank" rel="noopener noreferrer"><span>Sous-traitants Cloudflare</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.cloudflare.com/trust-hub/gdpr/" target="_blank" rel="noopener noreferrer"><span>Centre RGPD</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.cloudflare.com/trust-hub/" target="_blank" rel="noopener noreferrer"><span>Trust Hub</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Aucun e-mail n’est normalement nécessaire pour un compte self-serve. Pour un contrat Enterprise ou une version contresignée, passer par l’account manager Cloudflare.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-23">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-23" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-digitalocean" data-name="digitalocean" data-category="Hosting" data-priority="Selon hébergement">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">DigitalOcean</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-24">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour les Droplets, App Platform, Spaces, bases de données gérées et sauvegardes.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Hosting</span>
+        <span class="pill">Selon hébergement</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Recenser les services utilisés et les régions des Droplets, Spaces, bases de données gérées et sauvegardes.</li>
+<li>Le DPA est un avenant automatique aux Terms of Service&nbsp;: aucune signature distincte n’est requise.</li>
+<li>DigitalOcean publie des versions successives du DPA&nbsp;: archiver celle en vigueur à la date du contrat, pas seulement la dernière.</li>
+<li>Noter que DigitalOcean, LLC (États-Unis) est le sous-traitant&nbsp;: transferts couverts par le EU-U.S. Data Privacy Framework, avec les clauses contractuelles types en repli.</li>
+<li>Archiver la liste des sous-traitants&nbsp;: les ajouts sont notifiés par e-mail, avec 30 jours pour objecter.</li>
+<li>Conserver les rapports de certification (SOC 2, ISO) comme preuve des mesures techniques et organisationnelles.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://www.digitalocean.com/legal/data-processing-agreement" target="_blank" rel="noopener noreferrer"><span>DPA DigitalOcean</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.digitalocean.com/trust/subprocessors" target="_blank" rel="noopener noreferrer"><span>Sous-traitants DigitalOcean</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.digitalocean.com/trust/certification-reports" target="_blank" rel="noopener noreferrer"><span>Rapports de certification</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.digitalocean.com/legal" target="_blank" rel="noopener noreferrer"><span>Portail juridique</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Aucun e-mail n’est normalement nécessaire. Pour une version contresignée ou un contrat Enterprise, passer par le service commercial DigitalOcean.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-24">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-24" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
+        </label>
+      </div>
+      <div class="print-only"></div>
+    </article>
+    
+    <article class="card vendor-card" id="v-hostinger" data-name="hostinger" data-category="Hosting" data-priority="Selon hébergement">
+      <div class="card-topline">
+        <div>
+          <h3 class="vendor-name">Hostinger</h3>
+          <p class="status-flag"><span class="dot"></span><span class="status-flag-label">À faire</span></p>
+        </div>
+        <label class="check-wrap" title="Marquer comme terminé">
+          <input type="checkbox" class="done-check" data-key="vendor-25">
+          <span class="check-ui">✓</span>
+        </label>
+      </div>
+
+      <p class="summary">Pour l’hébergement web, les VPS, les domaines et les boîtes e-mail Hostinger.</p>
+
+      <div class="meta-row">
+        <span class="pill pill-cat">Hosting</span>
+        <span class="pill">Selon hébergement</span>
+        <span class="pill">Intégré au contrat</span>
+      </div>
+
+      <details>
+        <summary>Démarche à suivre <span class="chev" aria-hidden="true">⌄</span></summary>
+        <ol class="steps"><li>Identifier l’entité contractante&nbsp;: Hostinger International Ltd. (Chypre), Hostinger UK Limited ou Hostinger Global S.à r.l (Luxembourg).</li>
+<li>Le DPA est annexé aux conditions générales&nbsp;: il s’applique sans signature distincte.</li>
+<li>Archiver le DPA daté, les conditions générales et la preuve d’acceptation.</li>
+<li>Relever les sous-traitants listés en annexe du DPA (AWS, Google Cloud, Cloudflare, MailChannels, Proofpoint, Anthropic, spectra tech)&nbsp;: il n’existe pas de page publique séparée.</li>
+<li>Vérifier la localisation des serveurs du plan souscrit et les mécanismes de transfert applicables (clauses contractuelles types, addendum UK).</li>
+<li>Pour une version contresignée ou une question sur les transferts, écrire à gdpr@hostinger.com.</li></ol>
+      </details>
+
+      <details>
+        <summary>Liens et téléchargements <span class="chev" aria-hidden="true">⌄</span></summary>
+        <div class="links-grid"><a class="resource-link" href="https://www.hostinger.com/legal/dpa" target="_blank" rel="noopener noreferrer"><span>DPA Hostinger</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.hostinger.com/legal/universal-terms-of-service-agreement" target="_blank" rel="noopener noreferrer"><span>Conditions générales</span><span class="ext" aria-hidden="true">↗</span></a>
+<a class="resource-link" href="https://www.hostinger.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer"><span>Politique de confidentialité</span><span class="ext" aria-hidden="true">↗</span></a></div>
+      </details>
+
+      <details>
+        <summary>Contact / envoi <span class="chev" aria-hidden="true">⌄</span></summary>
+        <p class="contact-note">Écrire à gdpr@hostinger.com pour toute demande relative au DPA, aux sous-traitants ou aux transferts. La liste des sous-traitants figure en annexe du DPA&nbsp;: il n’y a pas de page publique à surveiller, il faut revérifier le document lui-même.</p>
+      </details>
+
+      <div class="card-foot">
+        <label class="field">
+          <span>Statut</span>
+          <select class="status-select" data-key="vendor-25">
+            <option value="not-started">À faire</option>
+            <option value="in-progress">En cours</option>
+            <option value="waiting">En attente fournisseur</option>
+            <option value="completed">Terminé</option>
+            <option value="not-applicable">Non applicable</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Notes internes <span class="saved-hint">enregistré</span></span>
+          <textarea class="notes" data-key="vendor-25" placeholder="Compte, date, signataire, identifiant, remarques…"></textarea>
         </label>
       </div>
       <div class="print-only"></div>
